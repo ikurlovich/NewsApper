@@ -17,14 +17,14 @@
 		594AF15E2B2BA93C004FDEF2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 594AF15D2B2BA93C004FDEF2 /* SnapKit */; };
 		594AF1602B2BA93C004FDEF2 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 594AF15F2B2BA93C004FDEF2 /* SnapKit-Dynamic */; };
 		594AF1682B2BADBB004FDEF2 /* GeneralCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AF1672B2BADBB004FDEF2 /* GeneralCollectionViewCell.swift */; };
-		594AF16B2B2BB184004FDEF2 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AF16A2B2BB184004FDEF2 /* UIView+Ex.swift */; };
-		594AF16D2B2BB1A3004FDEF2 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AF16C2B2BB1A3004FDEF2 /* String+Ex.swift */; };
 		594AF16F2B2CE6DA004FDEF2 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594AF16E2B2CE6DA004FDEF2 /* DetailViewController.swift */; };
 		59A5BC572B30CA7C0094BA5A /* DetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC562B30CA7C0094BA5A /* DetailsCollectionViewCell.swift */; };
 		59A5BC592B30EFA70094BA5A /* GeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC582B30EFA70094BA5A /* GeneralViewModel.swift */; };
 		59A5BC5C2B30F2880094BA5A /* NewsResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC5B2B30F2880094BA5A /* NewsResponseObject.swift */; };
 		59A5BC5E2B30F30B0094BA5A /* ArticleResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC5D2B30F30B0094BA5A /* ArticleResponseObject.swift */; };
 		59A5BC612B30F5850094BA5A /* ArticleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC602B30F5850094BA5A /* ArticleCellViewModel.swift */; };
+		59A5BC642B321C210094BA5A /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC622B321C210094BA5A /* String+Ex.swift */; };
+		59A5BC652B321C210094BA5A /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC632B321C210094BA5A /* UIView+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +38,14 @@
 		594AF1582B2A70E3004FDEF2 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
 		594AF15A2B2A711C004FDEF2 /* TechnologyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnologyViewController.swift; sourceTree = "<group>"; };
 		594AF1672B2BADBB004FDEF2 /* GeneralCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralCollectionViewCell.swift; sourceTree = "<group>"; };
-		594AF16A2B2BB184004FDEF2 /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Ex.swift"; path = "../../../VerregularGit/Verregular/Extensions/UIView+Ex.swift"; sourceTree = "<group>"; };
-		594AF16C2B2BB1A3004FDEF2 /* String+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Ex.swift"; path = "../../../VerregularGit/Verregular/Extensions/String+Ex.swift"; sourceTree = "<group>"; };
 		594AF16E2B2CE6DA004FDEF2 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		59A5BC562B30CA7C0094BA5A /* DetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		59A5BC582B30EFA70094BA5A /* GeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewModel.swift; sourceTree = "<group>"; };
 		59A5BC5B2B30F2880094BA5A /* NewsResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponseObject.swift; sourceTree = "<group>"; };
 		59A5BC5D2B30F30B0094BA5A /* ArticleResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleResponseObject.swift; sourceTree = "<group>"; };
 		59A5BC602B30F5850094BA5A /* ArticleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellViewModel.swift; sourceTree = "<group>"; };
+		59A5BC622B321C210094BA5A /* String+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
+		59A5BC632B321C210094BA5A /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,8 +149,8 @@
 		594AF1692B2BB141004FDEF2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				594AF16C2B2BB1A3004FDEF2 /* String+Ex.swift */,
-				594AF16A2B2BB184004FDEF2 /* UIView+Ex.swift */,
+				59A5BC622B321C210094BA5A /* String+Ex.swift */,
+				59A5BC632B321C210094BA5A /* UIView+Ex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 				594AF16F2B2CE6DA004FDEF2 /* DetailViewController.swift in Sources */,
 				594AF15B2B2A711C004FDEF2 /* TechnologyViewController.swift in Sources */,
 				59A5BC592B30EFA70094BA5A /* GeneralViewModel.swift in Sources */,
-				594AF16D2B2BB1A3004FDEF2 /* String+Ex.swift in Sources */,
+				59A5BC642B321C210094BA5A /* String+Ex.swift in Sources */,
 				594AF1682B2BADBB004FDEF2 /* GeneralCollectionViewCell.swift in Sources */,
 				59A5BC612B30F5850094BA5A /* ArticleCellViewModel.swift in Sources */,
 				594AF1572B2A6F8F004FDEF2 /* TabBarController.swift in Sources */,
@@ -279,7 +279,7 @@
 				594AF1432B2A55E6004FDEF2 /* AppDelegate.swift in Sources */,
 				59A5BC572B30CA7C0094BA5A /* DetailsCollectionViewCell.swift in Sources */,
 				59A5BC5E2B30F30B0094BA5A /* ArticleResponseObject.swift in Sources */,
-				594AF16B2B2BB184004FDEF2 /* UIView+Ex.swift in Sources */,
+				59A5BC652B321C210094BA5A /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
