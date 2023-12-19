@@ -47,8 +47,12 @@ final class GeneralCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Private methods
+    // MARK: - Methods
+    func set(article: ArticleCellViewModel) {
+        titleLabel.text = article.title
+    }
     
+    // MARK: - Private methods
     private func setupUI() {
         addSubviews([imageView, blackView, titleLabel])
         
@@ -67,7 +71,7 @@ final class GeneralCollectionViewCell: UICollectionViewCell {
         
         titleLabel.snp.makeConstraints { make in
             make.top.bottom.equalTo(blackView)
-            make.leading.trailing.equalToSuperview().offset(5)
+            make.leading.trailing.equalToSuperview().inset(15)
         }
     }
 }
