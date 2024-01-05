@@ -25,6 +25,9 @@
 		59A5BC612B30F5850094BA5A /* ArticleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC602B30F5850094BA5A /* ArticleCellViewModel.swift */; };
 		59A5BC642B321C210094BA5A /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC622B321C210094BA5A /* String+Ex.swift */; };
 		59A5BC652B321C210094BA5A /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC632B321C210094BA5A /* UIView+Ex.swift */; };
+		59A5BC672B321CEB0094BA5A /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC662B321CEB0094BA5A /* ApiManager.swift */; };
+		59A5BC6A2B3B17420094BA5A /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A5BC692B3B17420094BA5A /* NetworkingError.swift */; };
+		59D2B2572B48C6CD008821FC /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2B2562B48C6CD008821FC /* NewsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		59A5BC602B30F5850094BA5A /* ArticleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCellViewModel.swift; sourceTree = "<group>"; };
 		59A5BC622B321C210094BA5A /* String+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
 		59A5BC632B321C210094BA5A /* UIView+Ex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
+		59A5BC662B321CEB0094BA5A /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		59A5BC692B3B17420094BA5A /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		59D2B2562B48C6CD008821FC /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,7 @@
 			children = (
 				594AF1422B2A55E6004FDEF2 /* AppDelegate.swift */,
 				594AF1562B2A6F8F004FDEF2 /* TabBarController.swift */,
+				59A5BC682B3910460094BA5A /* Networking */,
 				594AF1612B2BAD45004FDEF2 /* General */,
 				594AF1622B2BAD4E004FDEF2 /* Business */,
 				594AF1632B2BAD5F004FDEF2 /* Technology */,
@@ -159,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				594AF16E2B2CE6DA004FDEF2 /* DetailViewController.swift */,
+				59D2B2562B48C6CD008821FC /* NewsViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +195,15 @@
 				59A5BC5D2B30F30B0094BA5A /* ArticleResponseObject.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		59A5BC682B3910460094BA5A /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				59A5BC662B321CEB0094BA5A /* ApiManager.swift */,
+				59A5BC692B3B17420094BA5A /* NetworkingError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,11 +285,14 @@
 			files = (
 				594AF16F2B2CE6DA004FDEF2 /* DetailViewController.swift in Sources */,
 				594AF15B2B2A711C004FDEF2 /* TechnologyViewController.swift in Sources */,
+				59A5BC6A2B3B17420094BA5A /* NetworkingError.swift in Sources */,
 				59A5BC592B30EFA70094BA5A /* GeneralViewModel.swift in Sources */,
 				59A5BC642B321C210094BA5A /* String+Ex.swift in Sources */,
 				594AF1682B2BADBB004FDEF2 /* GeneralCollectionViewCell.swift in Sources */,
 				59A5BC612B30F5850094BA5A /* ArticleCellViewModel.swift in Sources */,
 				594AF1572B2A6F8F004FDEF2 /* TabBarController.swift in Sources */,
+				59A5BC672B321CEB0094BA5A /* ApiManager.swift in Sources */,
+				59D2B2572B48C6CD008821FC /* NewsViewModel.swift in Sources */,
 				59A5BC5C2B30F2880094BA5A /* NewsResponseObject.swift in Sources */,
 				594AF1472B2A55E6004FDEF2 /* GeneralViewController.swift in Sources */,
 				594AF1592B2A70E3004FDEF2 /* BusinessViewController.swift in Sources */,

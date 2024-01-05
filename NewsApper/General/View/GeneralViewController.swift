@@ -63,6 +63,15 @@ class GeneralViewController: UIViewController {
         viewModel.reloadData = { [weak self] in
             self?.collectionView.reloadData()
         }
+        
+        viewModel.reloadCell = { [weak self] row in
+            self?.collectionView.reloadItems(at: [IndexPath(row: row, section: 0)])
+        }
+        
+        viewModel.showError = { error in
+            // TODO: show alert with error
+            print(error)
+        }
     }
     
     private func setupUI() {
@@ -106,7 +115,9 @@ extension GeneralViewController: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 extension GeneralViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetailViewController(), animated: true)
+        let article = viewModel.getArticle(for: indexPath.row)
+        
+        navigationController?.pushViewController(DetailViewController(viewModel: NewsViewModel(article: article)), animated: true)
     }
 }
 

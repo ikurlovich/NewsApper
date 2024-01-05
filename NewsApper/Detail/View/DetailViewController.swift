@@ -21,19 +21,12 @@ final class DetailViewController: UIViewController {
     private lazy var imageView: UIImageView = {
         let view = UIImageView()
         
-        view.image = UIImage(named: "ice") ?? UIImage.add
-        
         return view
     }()
     
     private lazy var newsLabel: UILabel = {
         let label = UILabel()
         
-        label.text = 
-"""
-Unraveling the Mystery:
-The Accelerated Melting of Glaciers Worldwide
-"""
         label.font = .boldSystemFont(ofSize: 14)
         label.numberOfLines = 0
         
@@ -42,28 +35,7 @@ The Accelerated Melting of Glaciers Worldwide
     
     private lazy var textNewsLabel: UILabel = {
         let label = UILabel()
-        
-        label.text = 
-"""
-In an alarming trend that's sweeping across the globe, glaciers are melting at an unprecedented rate.This
-phenomenon, largely attributed to climate change, is having profound impacts on our planet's ecosystems and
-the human societies that depend on them.
-        
-Scientists have been monitoring the retreat of glaciers for decades, but recent observations suggest that the
-rate of melting has accelerated significantly. This rapid loss of ice is contributing to rising sea levels,
-threatening coastal communities and altering the landscapes of our planet.
-       
-In the Arctic and Antarctic regions, where some of the world's largest glaciers reside, the effects are
-particularly pronounced. The loss of ice in these areas is disrupting the habitats of various wildlife species
-and impacting local communities who rely on these ecosystems for their livelihoods.
-        
-Researchers are working tirelessly to understand the complex mechanisms driving glacier melt and to predict
-future scenarios. Their findings underscore the urgency of addressing climate change and highlight the need for
-global cooperation in mitigating its effects.
-        
-While the situation is dire, it's not too late to act. By reducing greenhouse gas emissions and transitioning to
-renewable energy sources, we can slow the rate of glacier melt and work towards a more sustainable future.
-"""
+
         label.font = .systemFont(ofSize: 14)
         label.textAlignment = .left
         label.numberOfLines = 0
@@ -74,7 +46,6 @@ renewable energy sources, we can slow the rate of glacier melt and work towards 
     private lazy var dateLabel: UILabel = {
         let label = UILabel()
         
-        label.text = "21:00 | 21.01.2021"
         label.font = .systemFont(ofSize: 14)
         label.textColor = .gray
         
@@ -82,10 +53,19 @@ renewable energy sources, we can slow the rate of glacier melt and work towards 
     }()
     
     // MARK: - Properties
-    
     private let edges = 10
+    private let viewModel: NewsViewModelProtocol
     
     // MARK: - Life cycle
+    init(viewModel: NewsViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -102,6 +82,17 @@ renewable energy sources, we can slow the rate of glacier melt and work towards 
         contentView.addSubviews([imageView, newsLabel, dateLabel, textNewsLabel])
         view.addSubview(scrollView)
         
+        newsLabel.text = viewModel.title
+        textNewsLabel.text = viewModel.description
+        dateLabel.text = viewModel.date
+        
+        if let data = viewModel.imageData,
+            let image = UIImage(data: data) {
+            imageView.image = image
+        } else {
+            imageView.image = UIImage(named: "image")
+        }
+        
         setupConstraints()
     }
     
@@ -111,12 +102,12 @@ renewable energy sources, we can slow the rate of glacier melt and work towards 
         }
         
         contentView.snp.makeConstraints { make in
-            make.size.edges.equalTo(scrollView)
+            make.edges.equalToSuperview()
+            make.width.equalTo(scrollView.snp.width)
         }
         
         imageView.snp.makeConstraints { make in
             make.top.leading.trailing.equalTo(contentView)
-            make.height.equalTo(200)
         }
         
         newsLabel.snp.makeConstraints { make in
@@ -131,8 +122,7 @@ renewable energy sources, we can slow the rate of glacier melt and work towards 
         
         textNewsLabel.snp.makeConstraints { make in
             make.top.equalTo(dateLabel.snp.bottom).offset(edges)
-            make.leading.trailing.equalTo(contentView).inset(edges)
+            make.leading.trailing.bottom.equalTo(contentView).inset(edges)
         }
-
     }
 }
